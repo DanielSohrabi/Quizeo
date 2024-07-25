@@ -14,3 +14,4 @@ This is a personal react experiment, where my goals are to practice using the fo
 - Rate limiting causes quiz to show nothing after pressing start quiz
 - Text wrapping for longer answer breaks answer buttons
 - Styling is not suited for different screen sizes as of now
+- Instances of list children missing the key prop
