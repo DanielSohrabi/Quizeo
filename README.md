@@ -5,7 +5,7 @@ Welcome to Quizeo, a quizzing app made with React.js.
 
 This is a personal react experiment, where my goals are to practice using the following:
 - Asynchronous Code and Fetch API
-- Local Storage (Not implemented yet)
+- Local Storage
 - State management
 - Reusable React Components
 
