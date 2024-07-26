@@ -2,12 +2,12 @@ import React from "react"
 import { nanoid } from "nanoid"
 import { decode } from "html-entities"
 
-export default function Question( { rawQuestionData, questionIndex, questionFormData, setQuestionFormData } ) {
+export default function Question( { rawQuestionData, questionIndex, questionFormData, setQuestionFormData, quizState } ) {
     const {question, incorrect_answers, correct_answer} = rawQuestionData
 
     function handleChange(event) {
         const newQuestionFormData = questionFormData.map((currentQuestion, index) => {
-            if (index == questionIndex) {
+            if (index == questionIndex && quizState !== "quiz--complete") {
                 return {
                     questionNumber: currentQuestion.questionNumber,
                     correctAnswer: currentQuestion.correctAnswer,

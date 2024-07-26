@@ -20,7 +20,7 @@ export default function Quiz( { quizState, setQuizState } ) {
                         {
                             questionNumber: index,
                             correctAnswer: rawQuestionData.correct_answer,
-                            chosenAnswer: rawQuestionData.correct_answer,
+                            chosenAnswer: "",
                             isCorrect: ""
                         }
                     ))
@@ -51,6 +51,7 @@ export default function Quiz( { quizState, setQuizState } ) {
                 questionIndex={index}
                 questionFormData={questionFormData}
                 setQuestionFormData={setQuestionFormData}
+                quizState={quizState}
             />
         )
     })
@@ -60,7 +61,7 @@ export default function Quiz( { quizState, setQuizState } ) {
 
             <div className="quiz">
                 {renderedQuestions}
-                
+
                 {
                     quizState === "quiz--complete" ?
 
