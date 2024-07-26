@@ -6,7 +6,7 @@ import { decode } from "html-entities"
 export default function Quiz( { quizState, setQuizState } ) {
     const [rawQuestionsData, setRawQuestionsData] = React.useState([])
     const [questionFormData, setQuestionFormData] = React.useState([])
-    
+
     React.useEffect(() => {
         fetch("https://opentdb.com/api.php?amount=5&category=28&type=multiple")
             .then((response) => response.json())
@@ -36,6 +36,14 @@ export default function Quiz( { quizState, setQuizState } ) {
 
         setQuestionFormData(newQuestionFormData)
         setQuizState("quiz--complete")
+
+        newQuestionFormData.map((currentQuestion) => {
+            const tempUserPoints = Number(localStorage.getItem("userPoints"))
+
+            if (currentQuestion.isCorrect) {
+                localStorage.setItem("userPoints", tempUserPoints+1)
+            }
+        })
     }
 
     function restartQuiz() {

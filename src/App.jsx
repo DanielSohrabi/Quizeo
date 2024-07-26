@@ -7,10 +7,11 @@ import './App.css'
 
 function App() {
   const [quizState, setQuizState] = React.useState("home")
-  
+  const [userPoints, setUserPoints] = React.useState(0)
+
   return (
     <>
-      {quizState === "home" ? <Home setQuizState={setQuizState}/> : <Quiz quizState={quizState} setQuizState={setQuizState}/>}
+      {quizState === "home" ? <Home setQuizState={setQuizState} setUserPoints={setUserPoints} userPoints={userPoints}/> : <Quiz quizState={quizState} setQuizState={setQuizState}/>}
     </>
   )
 }
