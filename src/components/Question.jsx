@@ -84,7 +84,7 @@ export default function Question( { rawQuestionData, questionIndex, questionForm
     return (
         <>
             <h1 className="question--header">{(questionIndex+1)+". "+decode(question)}</h1>
-            <div>
+            <div className="question--container">
                 {answerButtons}
             </div>
             
