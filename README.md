@@ -13,3 +13,5 @@ This is a personal react experiment, where my goals are to practice using the fo
 
 - Rate limiting causes quiz to show nothing after pressing play button.
 - Instances of list children missing the key prop.
+
+### https://quizeo-one.vercel.app/
