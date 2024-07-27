@@ -12,6 +12,4 @@ This is a personal react experiment, where my goals are to practice using the fo
 ## Known Bugs
 
 - Rate limiting causes quiz to show nothing after pressing play button.
-- Text wrapping for longer answers breaks answer buttons.
-- Styling is not suited for different screen sizes.
 - Instances of list children missing the key prop.
